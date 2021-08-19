@@ -5,49 +5,85 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
-<body>
-    <ul>
+<body bgcolor="#808080">
+    <ul id="menu">
         <li><a href="index.html">Bem-vindx</a>
      </li>
-        <li><a href="contato.html">Contato</a>
+        <li><a href="contato.html">Contate-me</a>
      </li>
     </ul>
 
 
-    <h1>Entre em contato comigo!</h1>
+    <h1 class="center "> Entre em contato comigo lindx!</h1>
 
-      <form >
-          <label for="nome">Nome:</label> <br>
-          <input type="text" id= "nome">
-       <br>
-       <br>
-          <label for="email">E-mail:</label> <br>
-          <input type="email" id= "email">
-       <br>
-       <br>
-          <label for="assunto">Assunto:</label> <br>
-          <textarea name="assunto" id="assunto" cols="40" rows="1
-          0"></textarea>
-       <br>
-       <br>
-      <button>Enviar</button>
+    <div class="container mb-50">
+      <div>
+         <form>
+            <label for="nome">Nome:</label> <br>
+            <input type="text" id= "nome" onkeyup="validaNome()">
+            <div id="txtNome">
 
-      </form>
+            </div>
+         <br>
+         
+            <label for="email">E-mail:</label> <br>
+            <input type="email" id= "email" onkeyup="validaEmail()">
+         <div id="txtEmail">
+            
+         </div>
+         <br>
+            <label for="assunto">Assunto:</label> <br>
+            <textarea name="assunto" id="assunto" cols="40" rows="6
+            0" onkeyup="validaAssunto()"></textarea>
+            <div id="txtAssunto">
 
-      <h2>Endereço</h2>  
+            </div>
+         
+         <br>
+        <button onclick="enviar()">Enviar</button>
+  
+        </form>
 
-      <p>R. José Nunes dos Santos, 1227</p>
-      <p>Parque Paulistano</p>
-      <p>São Paulo - SP</p>
+      </div>
+      <div class="ml-50">
+         <p>R. José Nunes dos Santos, 1227</p>
+         <p>Parque Paulistano</p>
+         <p>São Paulo - SP</p>
+         
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.137517628016!2d-46.42978288554485!3d-23.49155576490208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce63c37133f02f%3A0x1540ca3275ccf9a0!2sR.%20Jos%C3%A9%20Nunes%20dos%20Santos%2C%201227%20-%20Parque%20Paulistano%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2008080-600!5e0!3m2!1spt-BR!2sbr!4v1629147757004!5m2!1spt-BR!2sbr" 
+         width="400" 
+         height="250" 
+         style="border:0;" 
+         allowfullscreen="" 
+         loading="lazy" onmousemove="mapaZoom()" onmouseout="mapaNormal()" id="mapa"></iframe>
+
+      </div>
+       
+          
+       </div>
+       <br>
+       <br>
+
+       <footer>
+         <div class="container">
+             <a href="https://www.linkedin.com/in/regina-rodrigues/" target="blank">
+          <img class="tm-social p.30" src="assets/img/LinkedIn.png" alt="Logo do LinkedIn"></a>
+          
+          
+         </div>
+
+         <p class="center">
+          Regina Rodrigues &copy;
+      </p>
+     </footer>
+    
+
+       
       
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.137517628016!2d-46.42978288554485!3d-23.49155576490208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce63c37133f02f%3A0x1540ca3275ccf9a0!2sR.%20Jos%C3%A9%20Nunes%20dos%20Santos%2C%201227%20-%20Parque%20Paulistano%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2008080-600!5e0!3m2!1spt-BR!2sbr!4v1629147757004!5m2!1spt-BR!2sbr" 
-      width="400" 
-      height="250" 
-      style="border:0;" 
-      allowfullscreen="" 
-      loading="lazy"></iframe>
-      
+<script src="assets/js/script.js"></script>
 
 
 </body>
